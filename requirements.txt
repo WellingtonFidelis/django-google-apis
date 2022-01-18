@@ -1,0 +1,5 @@
+django==3.2.5
+
+django-environ==0.4.5
+pytest-mock==3.5.1
+requests==2.25.1
