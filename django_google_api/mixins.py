@@ -24,10 +24,10 @@ def reCAPTCHAValidation(token):
     result = requests.post(
         'https://www.google.com/recaptcha/api/siteverify',
         data={
-            'secret': settings.RECAPTCHA_PRIVATE_KEY,
+            'secret': settings.RECAPTCHA_SECRET_KEY,
             'response': token
         })
-
+    print('########  ', result.json())
     return result.json()
 
 

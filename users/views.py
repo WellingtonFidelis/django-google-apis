@@ -9,7 +9,7 @@ from django.views.generic.base import TemplateView
 from django.utils.decorators import method_decorator
 
 
-from did_django_google_api_tutorial.mixins import(
+from django_google_api.mixins import(
     AjaxFormMixin,
     reCAPTCHAValidation,
     FormErrors,
@@ -80,7 +80,7 @@ class SignUpView(AjaxFormMixin, FormView):
     # reCAPTURE key required in context
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["recaptcha_site_key"] = settings.RECAPTCHA_PUBLIC_KEY
+        context["recaptcha_site_key"] = settings.RECAPTCHA_SITE_KEY
         return context
 
     # over write the mixin logic to get, check and save reCAPTURE score
@@ -89,6 +89,7 @@ class SignUpView(AjaxFormMixin, FormView):
         if self.request.is_ajax():
             token = form.cleaned_data.get('token')
             captcha = reCAPTCHAValidation(token)
+            print('#######  ' , captcha)
             if captcha["success"]:
                 obj = form.save()
                 obj.email = obj.username

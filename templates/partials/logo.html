@@ -1,6 +1,7 @@
 {% load static %}
 <a href="{% url 'users:account' %}">
   <div class="brand-logo">
-    <img class="logo" src="{% static 'branding/did_logo.gif' %}" />
+    {% comment %} <img class="logo" src="{% static 'branding/did_logo.gif' %}" /> {% endcomment %}
+    <h1>WFS</h1>
   </div>
 </a>
