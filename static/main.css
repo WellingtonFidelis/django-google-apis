@@ -1,6 +1,6 @@
 body {
   font-family: "Courier Prime", monospace;
-  background-color: #cfb2c6;
+  background-color: #fff7fd;
 }
 * {
   box-sizing: border-box;
@@ -30,7 +30,7 @@ ul.sidenav {
   margin: 0;
   padding: 0;
   width: 25%;
-  background-color: #3b0028;
+  background-color: #1e0416;
   position: fixed;
   height: 100%;
   overflow: auto;
