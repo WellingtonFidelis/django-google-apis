@@ -27,7 +27,6 @@ def reCAPTCHAValidation(token):
             'secret': settings.RECAPTCHA_SECRET_KEY,
             'response': token
         })
-    print('########  ', result.json())
     return result.json()
 
 

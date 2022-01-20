@@ -89,7 +89,6 @@ class SignUpView(AjaxFormMixin, FormView):
         if self.request.is_ajax():
             token = form.cleaned_data.get('token')
             captcha = reCAPTCHAValidation(token)
-            print('#######  ' , captcha)
             if captcha["success"]:
                 obj = form.save()
                 obj.email = obj.username
