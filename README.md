@@ -58,7 +58,7 @@ git clone https://github.com/WellingtonFidelis/django-google-apis.git
 ```
 1. Depois de concluído, execute os seguintes comandos para seguir para o caminho do app:
 ``` bash
-cd django-google-apis/app-e-commerce-django
+cd django-google-apis/
 ```
 Para criar a imagem e deixar o app online:
 ``` bash
